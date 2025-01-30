@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 004 - Intro to CSS</title>
+    <style>
+        article {
+            color: red; 
+            border: 1px solid green;
+        }
+        article h1 {
+            color: purple;
+            font-size: 2rem;
+        }
+        #circle {
+            display: inline-block;
+            background: blue;
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            transition: all ease 3s;
+            padding: 10px;
+            border: 3px dashed red;
+            margin: 30px 0 20px;
+            box-shadow: 2px 2px 4px rgba(0,0,0, 0.3);
+            opacity: 0.5;
+            position: absolute;
+            /* top: calc(50% - 150px);
+            left: calc(50% - 150px); */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #circle:hover {
+            background: purple;
+            cursor: pointer;
+            width: 300px;
+            height: 300px;
+            margin-left: 50px;
+            box-shadow: 1px 1px 3px rgba(0,0,0, 0.7);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>This is my Page</h1>
+            <p>This is day 4, let's make shit pretty!</p>
+        </article>
+        <article>
+            <h1>This is my Page</h1>
+            <p>This is day 4, let's make shit pretty!</p>
+        </article>
+        <h1>testing</h1>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <a href="#circle">Go to Circle</a>
+        <div id="circle">
+            I am a circle
+        </div>
+    </main>
+</body>
+</html>

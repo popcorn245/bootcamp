@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 003 - Media Elements</title>
+    <link rel="icon" type="image/x-icon" href="images/dancing-cat.gif">
+</head>
+<body>
+    <main>
+        <section id="blog">
+            <h1>My Blog</h1>
+            <article>
+                <h2>My Dancing Cat</h2>
+                <p>Look at him go!</p>
+                <img src="images/dancing-cat.gif" alt="My Puppers" height="300"  />
+            </article>
+            <article>
+                <h2>My Media Files</h2>
+                <p>Take a look at these files!</p>
+                <audio controls>
+                    <source src="audios/doorbell.wav" />
+                    Your browser does not support the audio tag.
+                </audio>
+                <video controls style="width: 100%; max-width: 960px;">
+                    <source src="videos/3-hours-later.mp4" />
+                </video>
+            </article>
+            <table>
+                <thead>
+                    <tr>
+                        <td contenteditable>Name</td>
+                        <td contenteditable>Age</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable>Bobby</td>
+                        <td contenteditable>34</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form>
+                <label for="name-field">Name:</label>
+                <input id="name-field" name="name" type="text" value="Bobby" />
+
+                <label for="color-field">Favorite Color:</label>
+                <input id="color-field" name="color-field" type="color" value="#333333" />
+
+                <label for="birthday-field">Birthday:</label>
+                <input id="birthday-field" name="birthday" type="date" />
+
+                <label for="email-field">Email:</label>
+                <input id="email-field" name="email" type="email" />
+
+                <select value="Two">
+                    <option>One</option>
+                    <option selected>Two</option>
+                    <option>Three</option>
+                </select>
+
+                <label for="password-field">Password:</label>
+                <input id="password-field" name="password" type="password" placeholder="(Hint: Banana)" required />
+
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
