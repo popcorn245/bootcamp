@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 009 - Groundhog Day</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+    <script>
+      const str = "asdf";
+      const num = 1;
+      const myText = str + num;
+      const bool = true;
+      const nul = null;
+      let undef;
+      // let undef = "woo";
+      var jeff = 100;
+      var jeff = 200;
+      jeff = "wee";
+      // str = "waa";
+      // if (num === "1") {
+      //     alert(jeff);
+      // } else if (undef) {
+      //     alert("I will run");
+      // } else if (nul) {
+      //     alert("I am null");
+      // } else {
+      //     alert("I was false");
+      // }
+      const arr = ["Milk", "Eggs", "Cheese", 1, 2, 4, true, false, [
+        1, 2, 3
+      ]];
+      // let i = 0; - Initial Start to Index
+      // i < arr.length; - Conditional Statement (Runs while true)
+      // i++; - Incrementor (Adds 1 to i) i++ === i = i + 1
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+      let id = 0;
+      while (id < 10) {
+        console.log(arr[id]);
+        id++;
+      }
+
+      for(const a of arr) {
+        console.log(a);
+      }
+
+      console.log(arr.length);
+      console.log(arr.join(", "));
+
+      arr.forEach((a) => {
+        console.log(a);
+      });
+
+      const newArr = arr.map((a) => {
+        console.log(a);
+        if (typeof a === "number") {
+            return a + 1;
+        } else {
+            return a;
+        }
+      });
+
+      newArr.push(12, 1422, 22, 18, 6, 13);
+      const item = newArr.pop();
+
+      const numbersInArr = newArr.filter((a) => {
+        return typeof a === "number";
+      });
+
+      const sortedArr = numbersInArr.sort((a, b) => {
+        return a - b;
+      });
+
+      const firstItem = arr[0];
+
+      console.log(numbersInArr, sortedArr, firstItem);
+
+
+    //   function addTodo(event) {
+    //     event.preventDefault();
+    //     const listEl = document.querySelector("#test");
+    //     const value = document.querySelector("[name='todo']").value;
+    //     const itemEl = document.createElement("li");
+    //     itemEl.textContent = value;
+    //     itemEl.style.color = "red";
+    //     listEl.appendChild(itemEl);
+    //     arr.push(value);
+    //     console.log(arr);
+    //   }
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to Groundhog Day!</h1>
+    <p>My brain hurts.</p>
+    <ul id="test">
+      <li>Milk</li>
+      <li>Eggs</li>
+      <li>Cheese</li>
+    </ul>
+    <ol>
+      <li>Jeff</li>
+      <li>Jackie</li>
+      <li>Bobby</li>
+    </ol>
+    <form onsubmit="addTodo(event)">
+        <input name="todo" />
+        <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
