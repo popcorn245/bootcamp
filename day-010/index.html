@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 010 - Getting Started with Objects</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+    <script>
+      const asdf = 123;
+      const obj = {
+        asdf: 123,
+        two: "string"
+      };
+      const arr = [1, 2, 3];
+      const fruit = {
+        color: "red",
+        name: "Apple",
+        count: 2,
+        asdf
+      };
+
+      const [one, ...rest] = arr;
+      const {color, ...fruitNonUsed} = fruit;
+
+      console.log(color, fruitNonUsed, rest);
+
+      // const inMyFridge = [
+      //   {
+      //     color: "red",
+      //     name: "Apple",
+      //     count: 2,
+      // shoppingList: {
+      //   dierbergs: {
+      //     count: 1
+      //   }
+      // }
+      //   },
+      //   {
+      //     color: "green",
+      //     name: "Pear",
+      //     count: 1
+      //   }
+      // ];
+
+      // console.log(asdf, obj["asdf"], fruit.name, inMyFridge[0].name);
+
+      // for (const item of inMyFridge) {
+      //   console.log(item.name + " - " + item.count);
+      //   console.log(`${item.name} - ${item.count}`);
+      // }
+      // const arr = [1, 2, 3];
+      // fruit = {
+      //   color: "blue",
+      //   name: "Jeff",
+      //   count: 1
+      // };
+      fruit.name = "Jeff";
+      fruit.color = "blue";
+
+      console.log(Object.keys(fruit), Object.values(fruit), Object.entries(fruit));
+      for (const [key, value] of Object.entries(fruit)) {
+        console.log(`${key} - ${value}`);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to Groundhog Day!</h1>
+    <p>My brain hurts.</p>
+    <ul id="test">
+      <li>Milk</li>
+      <li>Eggs</li>
+      <li>Cheese</li>
+    </ul>
+    <ol>
+      <li>Jeff</li>
+      <li>Jackie</li>
+      <li>Bobby</li>
+    </ol>
+    <form onsubmit="addTodo(event)">
+        <input name="todo" />
+        <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
