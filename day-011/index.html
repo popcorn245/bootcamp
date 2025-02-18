@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 011 - Lets' get Functional</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+    <script>
+
+      const person = {
+        name: "aDfasdfasd",
+        yell: function() {
+          console.log(this);
+          const message = `Hello ${this.name}`;
+          alert(message);
+          return message;
+        },
+        setName(name) {
+          this.name = name;
+          return this;
+        }
+      };
+      const message = person.yell();
+      console.log(message);
+      console.log(person.setName("Jeff"));
+
+      function yellAtMe (message) {
+        alert(message);
+        return message;
+      };
+
+      const yellAtPerson = (event, person) => {
+        console.log(this);
+        var wee = 123;
+        event.preventDefault();
+        const name = document.querySelector("input[name='todo']").value;
+        console.log(wee);
+        setTimeout(() => {
+          console.log(yellAtMe(`Hey ${name}!`));
+        }, 3000);
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to Groundhog Day!</h1>
+    <p>My brain hurts.</p>
+    <ul id="test">
+      <li>Milk</li>
+      <li>Eggs</li>
+      <li>Cheese</li>
+    </ul>
+    <ol>
+      <li>Jeff</li>
+      <li>Jackie</li>
+      <li>Bobby</li>
+    </ol>
+    <form onsubmit="yellAtPerson(event)">
+        <input name="todo" value="CJ" />
+        <button type="submit">Save</button>
+    </form>
+  </body>
+</html>

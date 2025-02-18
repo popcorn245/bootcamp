@@ -27,40 +27,37 @@
       const [one, ...rest] = arr;
       const {color, ...fruitNonUsed} = fruit;
 
-      console.log(color, fruitNonUsed, rest);
+      console.log(obj.asdf, obj.two, fruitNonUsed, rest);
 
-      // const inMyFridge = [
-      //   {
-      //     color: "red",
-      //     name: "Apple",
-      //     count: 2,
-      // shoppingList: {
-      //   dierbergs: {
-      //     count: 1
-      //   }
-      // }
-      //   },
-      //   {
-      //     color: "green",
-      //     name: "Pear",
-      //     count: 1
-      //   }
-      // ];
+      const inMyFridge = [
+        {
+          color: "red",
+          name: "Apple",
+          count: 2,
+        },
+        {
+          color: "green",
+          name: "Pear",
+          count: 1
+        }
+      ];
 
       // console.log(asdf, obj["asdf"], fruit.name, inMyFridge[0].name);
 
-      // for (const item of inMyFridge) {
-      //   console.log(item.name + " - " + item.count);
-      //   console.log(`${item.name} - ${item.count}`);
-      // }
+      for (const item of inMyFridge) {
+        console.log(item.name + " - " + item.count);
+        console.log("",'',`${item.name} - ${item.count}`);
+      }
       // const arr = [1, 2, 3];
       // fruit = {
       //   color: "blue",
       //   name: "Jeff",
       //   count: 1
       // };
+      Object.freeze(fruit);
       fruit.name = "Jeff";
       fruit.color = "blue";
+
 
       console.log(Object.keys(fruit), Object.values(fruit), Object.entries(fruit));
       for (const [key, value] of Object.entries(fruit)) {
