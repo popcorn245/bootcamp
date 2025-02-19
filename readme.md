@@ -1,4 +1,2 @@
 # 🫡 Coding Bootcamp
-This is my bootcamp
-
-Testing 123
+This is my bootcamp getting started.
