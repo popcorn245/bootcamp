@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 013 - Attribute Event Bidning</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts/app.js"></script>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Event Binding!</h1>
+    <p>My brain hurts.</p>
+    <ul id="test">
+      <li>Milk</li>
+      <li>Eggs</li>
+      <li>Cheese</li>
+    </ul>
+    <ol>
+      <li>Jeff</li>
+      <li>Jackie</li>
+      <li>Bobby</li>
+    </ol>
+    <h2 id="in-cart">In Cart: $<span>0</span></h2>
+    <button onclick="addToCart(100)">Add to Cart - $100</button>
+    <button onclick="confirmPurchase()">Confirm</button>
+
+    <button data-message="Hello You" onclick="yellAtMe(event, 4)">Testing</button>
+    <button data-message="Hello Me" onclick="yellAtMe(event, 7)">Testing</button>
+    <button data-message="Hello Darkness my old friend" onclick="yellAtMe(event, 5)">Testing</button>
+    <form onsubmit="submitMyForm(event)" id="one">
+        <input name="todo" value="CJ" />
+        <button type="submit">Save</button>
+    </form>
+    <form onsubmit="submitMyForm(event)" id="two">
+      <input name="todo" value="CJ" />
+      <button type="submit">Save</button>
+  </form>
+  </body>
+</html>
