@@ -1,0 +1,15 @@
+h1 {
+    color: red;
+}
+
+.round {
+    border-radius: 100%;
+}
+
+.red {
+    color: red;
+}
+
+.shadow {
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+}
