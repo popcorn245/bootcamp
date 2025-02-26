@@ -1,0 +1,12 @@
+
+#profile {
+    display: none;
+}
+
+.logged-in #profile {
+    display: block;
+}
+
+.logged-in #login {
+    display: none;
+}

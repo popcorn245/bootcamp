@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 015 - Forms & Validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts/app.js"></script>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Forms!</h1>
+    <ul id="todos">
+    </ul>
+    <form id="login">
+      <input name="username" placeholder="Username" />
+      <input type="password" name="password" placeholder="Password" />
+      <button class="round red shadow" type="submit">Login</button>
+    </form>
+
+    <form id="profile">
+      <label>
+        Username: 
+        <input name="username" />
+      </label>
+      <label for="pass">Password:</label>
+      <input id="pass" type="password" name="password" />
+      <label>
+        Full Name:
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Email:
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Phone:
+        <input name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+      </label>
+      <button class="round red shadow" type="submit">Save</button>
+      <button id="logout">Logout</button>
+    </form>
+  </body>
+</html>
