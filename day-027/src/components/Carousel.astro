@@ -1,0 +1,40 @@
+---
+type BootstrapColor = 
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "warning"
+  | "info"
+  | "light"
+  | "dark"
+  | "white"
+  | "black";
+interface Props {
+    label: string;
+    slides: {
+        title: string;
+        description: string;
+        color?: BootstrapColor;
+    }[];
+}
+
+const {label, slides} = Astro.props;
+---
+
+<div id="carouselExample" class="carousel slide">
+  <h1 class="px-4 py-2 text-center mt-4">{label}</h1>
+  <div class="container">
+    <div class="row">
+      {slides.map(({title, color, description}) => <div class="col">
+        <div class="card" style="width: 18rem;">
+          <div class="card-img-top" style="background-image: url(images/001.png);"></div>
+          <div class="card-body">
+            <h5 class="card-title">{title}</h5>
+            <p class="card-text">{description}</p>
+            <a href="#" class={`btn btn-${color || "primary"}`}>Go somewhere</a>
+          </div>
+        </div>
+      </div>)}
+    </div>
+  </div>

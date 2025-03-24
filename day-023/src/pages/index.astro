@@ -1,0 +1,28 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Carousel from "../components/Carousel.astro";
+import Counter from "../components/react/counter";
+import Navigation from "../components/Navigation.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const name = "Bobby";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body data-bs-theme="light">
+    <Navigation page="home" title={SITE_TITLE} />
+    <Counter count={23} client:idle />
+    <h1 class="px-4 py-2 text-center">Welcome to Bootstrap!</h1>
+    <Carousel label="My Work" slides={[
+      {title: "Work One", color: "danger", description: "Some quick easdfasdxample text to build on the card title and make up the bulk of the card's content."},
+      {title: "Work Two", description: "Some quick exaasdfasdmple text to build on the card title and make up the bulk of the card's content."},
+      {title: "Work asdfasd", description: "Some quick asdfasdexample text to build on the card title and make up the bulk of the card's content."},
+      {title: "Work Four", description: "Some quickasdf example text to build on the card title and make up the bulk of the card's content."},
+      {title: "Work Five", description: "Some quick example text to build on the card title and make up the bulk of the card's content."},
+    ]} />
+  </body>
+</html>
